@@ -1,0 +1,24 @@
+/* 
+
+selector {
+  property: value;
+}
+
+*/
+
+h5 {
+  color: green;
+}
+
+h2 {
+  font-size: 80px;
+}
+
+.color-green {
+  color: green;
+  background-color: azure;
+}
+
+#elemento-id {
+  background-color: cadetblue;
+}

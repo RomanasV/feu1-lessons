@@ -1,0 +1,54 @@
+.wrapper {
+  padding: $spacing-30;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.half-width {
+    width: 50%;
+  }
+
+  &.bg-dark {
+    background-color: rgb(47, 47, 47);
+  }
+
+  h2 {
+    font-size: 40px;
+
+    &.color-red {
+      color: $color-red;
+      cursor: pointer;
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+
+  p {
+    &:first-of-type {
+      font-size: 1.5em;
+    }
+
+    // &::before {
+    //   content: '- ';
+    //   color: $color-red;
+    // }
+
+    // &.empty {
+    //   &::before {
+    //     content: unset;
+    //   }
+    // }
+
+    &:not(.empty) {
+      &::before {
+        content: '- ';
+        color: $color-red;
+      }
+    }
+  }
+
+}

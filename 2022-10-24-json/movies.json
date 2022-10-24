@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Doctor Strange in the Multiverse of Madness",
+    "review": {
+      "count": 255000,
+      "ranking": 7.1
+    },
+    "releaseYear": 2022,
+    "description": "Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats, including other-universe versions of himself, which.",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "directors": ["Sam Raimi"],
+    "cast": ["Benedict Cumberbatch", "Elizabeth Olsen", "Chiwetel Ejiofor"]
+  },
+  {
+    "name": "Fantastic Beasts: The Secrets of Dumbledore",
+    "review": {
+      "count": 103000,
+      "ranking": 6.2
+    },
+    "releaseYear": 2022,
+    "description": "Professor Albus Dumbledore must assign Newt Scammander and his fellow partners as Grindelwald begins to lead an army to eliminate all Muggles.",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "directors": ["David Yates"],
+    "cast": ["Eddie Redmayne", "Jude Law", "Ezra Miller"]
+  }
+]

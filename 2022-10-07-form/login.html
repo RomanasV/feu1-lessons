@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <!-- PIRMA DALIS:
+1. Sukurti login.html failą.
+2. Šiame puslapyje sukurti formą, kurioje yra:
+    2.1. Text tipo input elementas skirtas vartotojo prisijungimo vardui įrašyti.
+    2.2. Password tipo input elementas skirtas vartotojo slaptažodžiui įrašyti.
+    2.3. Checkbox tipo input elementas skirtas pažymėti jog sutinkama su sąlygomis.
+    2.4. Submit tipo input elementas skirtas priduoti (submit) formą.
+3. Visi input elementai (išskyrus submit) turi turėti label elementus. -->
+
+  <form id="login-form">
+    <div class="form-control">
+      <label for="user-name">User Name:</label>
+      <input type="text" name="name" id="user-name" placeholder="Enter your username">
+    </div>
+
+    <div class="form-control">
+      <label for="user-password">Password</label>
+      <input type="password" name="password" id="user-password" placeholder="Enter your password">
+    </div>
+
+    <div class="form-control">
+      <input type="checkbox" name="accept" id="user-access">
+      <label for="user-access">Accept terms and conditions</label>
+    </div>
+
+    <div class="form-control">
+      <input type="submit" id="submit-button" value="Login" disabled>
+    </div>
+  </form>
+
+  <script src="login.js"></script>
+</body>
+</html>

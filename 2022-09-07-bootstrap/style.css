@@ -1,0 +1,14 @@
+.custom-height {
+  height: 350px;
+  object-fit: cover;
+}
+
+.menu-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 0;
+}

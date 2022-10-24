@@ -1,0 +1,145 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+a.button {
+  display: inline-block;
+  background: blue;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-header {
+  background-color: white;
+}
+
+.main-header .main-header-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .main-navigation {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-left: 60px;
+}
+
+.main-header .main-navigation ul.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-left: 0;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+
+.main-header .main-navigation ul.main-menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero-box {
+  background-color: black;
+  color: white;
+}
+
+.hero-box .hero-box-content-wrapper {
+  padding: 100px;
+}
+
+.hero-box .title-wrapper {
+  margin-bottom: 300px;
+}
+
+.hero-box .title-wrapper .page-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+
+.hero-box .service-list {
+  display: flex;
+}
+
+.hero-box .service-list .service-item {
+  width: 50%;
+}
+
+.hero-box .service-list .service-item:first-child {
+  padding-right: 100px;
+}
+
+.hero-box .service-list .service-item:last-child {
+  border-left: 1px solid white;
+  padding-left: 100px;
+}
+
+.facts {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.facts .facts-header-wrapper {
+  margin-bottom: 100px;
+}
+
+.facts .facts-header-wrapper .facts-header {
+  font-size: 80px;
+}
+
+.facts .facts-header-wrapper p {
+  margin: 0;
+  max-width: 470px;
+  margin-left: 200px;
+}
+
+.facts .facts-list-wrapper {
+  margin-left: 200px;
+  margin-right: 65px;
+}
+
+.facts .facts-list-wrapper .facts-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 80px;
+}
+
+.facts .facts-list-wrapper .facts-list .facts-item {
+  width: calc(50% - 40px);
+  font-weight: 600;
+}
+
+.facts .facts-list-wrapper .facts-list .facts-item .facts-value {
+  font-size: 100px;
+}
+
+.facts .facts-list-wrapper .facts-list .facts-item .facts-value.medium-size {
+  font-size: 72px;
+}
+
+.facts .facts-list-wrapper .facts-list .facts-item .facts-description {
+
+}

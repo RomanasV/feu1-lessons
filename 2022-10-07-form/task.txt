@@ -1,0 +1,180 @@
+PIRMA DALIS:
+Sukurti kontaktų formą.
+1. Kontaktų formoje turi būti šie laukeliai:
+    1. Tekstinis laukelis vardui (privalomas).
+    2. Tekstinis laukelis pavardei (privalomas).
+    3. Skaičiaus laukelis amžiui (privalomas).
+    4. Laukelis įvesti telefono numerį (neprivalomas).
+    5. Laukelis įvesti el. paštą (privalomas).
+    6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
+    7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 5gr.
+
+Ją pridavus (submit):
+2. Žemiau kontaktų formos turi būtų atvaizduoti visi duomenys, pvz. „Amžius: 25m.".
+3. Kontaktų forma turi išsivalyti.
+4. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą.
+
+ANTRA DALIS:
+1. Sukurti div elementą, kuris turės id „students-list".
+2. Kiekvieną kartą pridavus formą (submit), turi būti sukurtas naujas div elementas su klase „student-item" ir pridedamas į „students-list" elemento pradžią.
+3. Duomenys apie studentą turi būti įdėti į „student-item" elementą.
+
+4. Formoje pridėti „checkbox" tipo input'ą, kuriame pateikta galimybę rinktis iš dominančių programavimo kalbų.
+5. Dominančias programavimo kalbas atvaizduoti „student-item" elemente.
+
+6. Sukūrus studentą, turi iššokti <span> elementas, kuris informuoja apie studento sukūrimą: „Sukurtas studentas (Vardas Pavardė)". Šis span elementas dingsta po 5 sekundžių.
+7. Range reikšmės atvaizdavimas naujame elemente.
+
+TREČIA DALIS:
+1. Vietoje el. pašto rodyti tik žvaigždutes „****".
+2. Kiekviename „student-item" elemente sukurti mygtuką „Rodyti asmens duomenis".
+3. Paspaudus šį mygtuką:
+    3.1. Parodyti to studento el. paštą.
+    3.2. Pakeist mygtuko tekstą į „Slėpti asmens duomenis".
+4. Jeigu asmens duomenys yra rodomi, tai paspaudus mygtuką:
+    4.1. Paslėpti asmens el. paštą.
+    4.2. Mygtuko tekstą pakeisti į „Rodyti asmens duomenis".
+
+PENKTA DALIS (studento ištrynimas):
+1. Prie kiekvieno sukurti studento elemento pridėti mygtuką „Ištrinti studentą".
+2. Paspaudus šį mygtuką, studento elementas yra ištrinamas.
+3. Ištrynus studentą, turi iššokti <span> elementas, kuris informuoja apie studento ištrynimą: „Studentas (Vardas Pavardė) sėkmingai ištrintas.". Šis span elementas dingsta po 5 sekundžių.
+
+KETVIRTA UŽDUOTIS (formos validacija naudojant JavaScript):
+1. Priduodant formą (submit) patikrinti ar privalomi laukeliai nėra tušti.
+2. Jeigu bent vienas privalomas formos laukelis yra tuščias:
+    2.1. Formos alert žinutėje reikia parašyti, jog ne visi laukeliai yra užpildyti. Šis tekstas turi būti raudonos spalvos.
+    2.2. Kiekvienas privalomas input laukelis, kuris nėra užpildytas:
+        2.2.1. Turi būti apvestas raudonu rėmeliu.
+        2.2.2. Šalia laukelio turi būti parašytas raudonas tekstas: „Šis laukelis yra privalomas".
+
+PAPILDOMA UŽDUOTIS (formos validacija naudojant JavaScript):
+Papildyti formos validaciją. Jeigu:
+1. Vardas yra trumpesnis nei 3 simboliai, parašyti: „Vardas privalo būti bent 3 simbolių ilgumo".
+2. Pavardė yra trumpesnė nei 3 simboliai, parašyti: „Pavardė privalo būti bent 3 simbolių ilgumo".
+3. Amžius yra neigamas, parašyti: „Amžius privalo būti teigiamas skaičius".
+4. Amžius yra daugiau nei 120 metų, parašyti: „Įvestas amžius yra per didelis".
+5. Telefono numeris yra mažiau nei 9 arba daugiau nei 12 simbolių, parašyti: „Įvestas telefono numeris yra neteisingas".
+6. Elektroninis paštas yra trumpesnis nei 8 simboliai ir jame nėra panaudotas @ ir . simboliai, parašyti: „Įvestas elektroninis paštas yra neteisingas".
+
+DEVINTA UŽDUOTIS (local storage):
+1. Vedamą tekstą į input elementus išsaugoti į localStorage.
+2. Perkrovus puslapį localStorage esančiomis reikšmėmis užpildyti input elementus.
+3. Jeigu sukuriamas studentas, tai localStorage esančias reikšmes reikia išvalyti.
+
+
+ŠEŠTA UŽDUOTIS:
+1. Sukurti pradinius duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
+2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda duomenis iš šio masyvo.
+
+
+AŠTUNTA UŽDUOTIS (filtravimas):
+1. HTML faile sukurti naują form'ą. Joje pridėti šiuos input elementus: text ir submit.
+2. Formos submit event'o metu, gauti įvestą tekstą ir:
+2.1. Patikrinti ar studentų sąraše yra studentas, kurio varde arba pavardėje yra įvestas tekstas.
+2.2. Ekrane atvaizduoti tik tuos studentus, kurie tenkina sąlygą.
+
+1. Selektinti paieškos forma javascript'e ir priskirti ją kintamąjam.
+2. Šiam kintamąjam pridėti event listener'į - jo tipas submit.
+3. Submit metu, išsaugoti duomenis, kurie įvesti paieškos formoje (text input'e).
+4. Selektinti visus studentų elementus, juos pridedam į kintamąjį.
+5. Leisti ciklą per studentų masyvą ir kiekvieno ciklo metu:
+5.1. Paselektinti studento vardą.
+5.2. Paselektinti studento pavardę.
+5.3. Patikrinti ar varde arba pavardėje yra ieškoma frazė.
+5.3.1. Jeigu nėra, tai reikia paslėpti studento elementą (display: none).
+5.3.2. Jeigu yra, tai reikia parodyti studento elementą (display: block).
+
+
+3. Prie formos pridėti select elementą ir jame sukurti sąrašą (option elementus), kuriuose būtų nurodytą pagal kurią informaciją studento yra ieškoma (vardas, pavardė, grupė ir t.t., bet išskyrus telefono numerį ir elektroninį paštą).
+4. Patobulinti formą, kad studento būtų ieškoma ne tik pagal vardą ir pavardę, tačiau ir pagal pasirinktą atributą.
+
+
+
+1. Selektinti paieškos forma javascript'e ir priskirti ją kintamąjam.
+2. Šiam kintamąjam pridėti event listener'į - jo tipas submit.
+3. Submit metu, išsaugoti duomenis, kurie įvesti paieškos formoje (text input'e).
++ 3.1. Submit metu, išsaugoti select elemento value.
+4. Selektinti visus studentų elementus, juos pridedam į kintamąjį.
+5. Leisti ciklą per studentų masyvą ir kiekvieno ciklo metu:
+5.1. Paselektinti studento vardą.
+5.2. Paselektinti studento pavardę.
++ 5.3. Paselektinti studento amžių.
++ 5.4. Paselektinti studento grupę.
++ 5.5. Paselektinti studento it žinias.
+- 5.3. Patikrinti ar varde arba pavardėje yra ieškoma frazė.
++ 5.3. Priklausomai nuo to, kuri vertė yra pasirinkta select elemente, patikrinti ar nurodytame elemente yra paieškos frazė.
+5.3.1. Jeigu nėra, tai reikia paslėpti studento elementą (display: none).
+5.3.2. Jeigu yra, tai reikia parodyti studento elementą (display: block).
+
+
+DEŠIMTA UŽDUOTIS:
+1. Iš localStorage paimti students-data masyvą ir jį išsiparsinti.
+2. Sukurti naujo studento objektą pagal pateiktą pavyzdį.
+3. Naujo studento objektą pridėti (shift) į studentų masyva (kuris gautas iš pirmos užduoties).
+4. Atnaujintą studentų masyvą pridėti į localStorage (nepamiršti stringify metodo).
+
+
+STUDENTO OBJEKTO PAVYZDYS:
+
+{
+    name: 'John',
+    surname: 'Doe',
+    age: 31,
+    phone: 4565464645,
+    email: 'name@surname.com',
+    itKnowledge: 8,
+    group: 'feu 5',
+    interests: ['JavaScript', 'PHP'],
+}
+
+
+
+
+
+
+
+PIRMA DALIS:
+1. Sukurti login.html failą.
+2. Šiame puslapyje sukurti formą, kurioje yra:
+    2.1. Text tipo input elementas skirtas vartotojo prisijungimo vardui įrašyti.
+    2.2. Password tipo input elementas skirtas vartotojo slaptažodžiui įrašyti.
+    2.3. Checkbox tipo input elementas skirtas pažymėti jog sutinkama su sąlygomis.
+    2.4. Submit tipo input elementas skirtas priduoti (submit) formą.
+3. Visi input elementai (išskyrus submit) turi turėti label elementus.
+4. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu checkbox elementas nėra pažymėtas.
+
+ANTRA DALIS:
+5. Sukurti masyvą, kuriame būtų bent 5 nariai (objektai). Kiekvienas objektas turi:
+    5.1. userName property, kurio reikšmė yra vartotojo prisijungimo vardas (string).
+    5.2. userPassword property, kurio reikšmė yra vartotojo slaptažodis (string).
+6. Formos submit metu (formą galima priduoti tik tada jeigu yra pažymėtas checkbox input elementas), reikia patikrinti ar įrašytas vartotojo vardas ir slaptažodis atitinka bent vieną iš masyve esančių elementų.
+    6.1. Jeigu atitinka, tai ištrinti form'ą ir sukurti h1 elementą sveikinantį sėkmingai prisijungus.
+    6.2. Jeigu neatitinka, tai:
+        6.2.1. Formoje pridėti elementą, kuriame parašyta jog prisijungimo vardas arba slaptažodis buvo neteisingas.
+        6.2.2. Slaptažodžio laukelis turi išsivalyti.
+
+7. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu vartotojo vardas ir slaptažodis nėra įvestas.
+
+8. Formos submit tipo input elementas turėtų būti išjungtas (disabled) jeigu vartotojo vardas yra trumpesnis nei 5 simboliai ir slaptažodis yra trumpesnis nei 11 simboliai.
+
+
+AUTOMOBILIŲ UŽDUOTIS:
+0. Formoje surinktą informaciją submit metu atvaizduoti ekrane aiškiu tekstu.
+1. Sukurti formą automobiliams filtruoti, kurioje būtų galimybė pasirinkti:
+    1.1. Checkbox tipo input elementas skirtas pažymėti naudotus automobilius.
+    1.2. Range tipo input elementas minimaliai kainai nurodyti.
+        1.2.1. Elemento minimali reikšmė 500
+        1.2.2. Elemento maksimali reikšmė 500 000
+        1.2.3. Keisti kainą galima kas 500
+    1.3. Range tipo input elementas maksimaliai kainai nurodyti (kurti tuo pačiu principu kaip ir 1.2 užduotyje).
+    1.4. Select elementas skirtas minimaliems metams nurodyti.
+    1.5. Select elementas skirtas maksimaliems metams nurodyti.
+    1.6. Select elementas skirtas spalvai nurodyti.
+
+2. Sukurti automobilių markių (brand) select elementą:
+    2.1. Brand'ų option elementai turi būti sugeneruoti naudojant automobilių masyve esančių brand properties reikšmes.
+    2.2. Pirmas option elementas turi būti be jokios reikšmės.
+
+3. Pasirinkus automobilio brand'ą, reikia sukurti naują select elementą, kuris skirtas automobilio modeliui nurodyti.
+    3.1. Modelio option elementai turi sugeneruoti naudojant automobilių masyve esančių models properties reikšmes. Kiekvienas models masyve esantis narys turi būti naujas option elementas.

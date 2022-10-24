@@ -1,0 +1,19 @@
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  padding: 100px 30px;
+  background-color: #597648;
+  background-image: url("dogs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+}

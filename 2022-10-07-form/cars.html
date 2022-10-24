@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars Task</title>
+</head>
+<body>
+  <!-- AUTOMOBILIŲ UŽDUOTIS:
+0. Formoje surinktą informaciją submit metu atvaizduoti ekrane aiškiu tekstu.
+1. Sukurti formą automobiliams filtruoti, kurioje būtų galimybė pasirinkti:
+    1.1. Checkbox tipo input elementas skirtas pažymėti naudotus automobilius.
+    1.2. Range tipo input elementas minimaliai kainai nurodyti.
+        1.2.1. Elemento minimali reikšmė 500
+        1.2.2. Elemento maksimali reikšmė 500 000
+        1.2.3. Keisti kainą galima kas 500
+    1.3. Range tipo input elementas maksimaliai kainai nurodyti (kurti tuo pačiu principu kaip ir 1.2 užduotyje).
+    1.4. Select elementas skirtas minimaliems metams nurodyti.
+    1.5. Select elementas skirtas maksimaliems metams nurodyti.
+    1.6. Select elementas skirtas spalvai nurodyti. -->
+
+    <form id="cars-form">
+      <div class="form-control">
+        <label for="car-brands">Brand:</label>
+        <select name="car-brands" id="car-brands"></select>
+      </div>
+      <div class="form-control">
+        <label for="car-brands">Models:</label>
+        <select name="car-brands" id="car-models"></select>
+      </div>
+
+      <div class="form-control">
+        <input type="checkbox" name="car-types" id="used-cars">
+        <label for="used-cars">Used Cars</label>
+        <input type="checkbox" name="car-types" id="new-cars">
+        <label for="new-cars">New Cars</label>
+      </div>
+
+      <div class="form-control">
+        <label for="min-price">Min price:</label>
+        <input type="range" name="min-price" id="min-price" min="500" max="500000" step="500" value="500">
+        
+        <label for="min-price">Max price:</label>
+        <input type="range" name="max-price" id="max-price" min="500" max="500000" step="500" value="500000">
+      </div>
+
+      <div class="form-control">
+        <label for="min-year">Min year:</label>
+        <select name="min-year" id="min-year">
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+
+        <label for="max-year">Max year:</label>
+        <select name="max-year" id="max-year">
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+          <option value="all">All</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="white">White</option>
+          <option value="black" selected>Black</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Search">
+    </form>
+
+  <script src="cars.js"></script>
+</body>
+</html>

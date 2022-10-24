@@ -1,0 +1,24 @@
+[
+  {
+    "name": "John",
+    "age": 28,
+    "children": ["Child 1", "Child 2"],
+    "address": {
+      "street": "Vilniaus st.",
+      "city": "Vilnius",
+      "country": "Lithuania"
+    },
+    "married": true
+  },
+  {
+    "name": "Doe",
+    "age": 30,
+    "children": [],
+    "address": {
+      "street": "Vilniaus st.",
+      "city": "Vilnius",
+      "country": "Lithuania"
+    },
+    "married": false
+  }
+]

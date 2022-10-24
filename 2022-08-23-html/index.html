@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML pagrindai</title>
+  <style>
+    h2 {
+      color: blueviolet; 
+      background-color: lightgreen; 
+    }
+
+    h3 {
+      color: purple;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 
+    Block Tipo HTML elementai:
+    1. Prasideda naujoje eilutėje.
+    2. Užima pilną tėvinio elemto plotį.
+  -->
+  
+  <!-- Headings - pavadinimai -->
+  <h1 style="color: green; font-size: 60px; background-color: beige;">Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+
+  <div id="elemento-id">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  </div>
+
+  <!-- Paragrafas -->
+  <p>Lorem ipsum dolor, sit <i>amet consectetur adipisicing</i> elit. Similique quia velit quae accusamus, commodi saepe temporibus magnam, nam <em>quo minima dolores</em> nesciunt! Ad qui sit rerum, asperiores voluptatibus sint dolor esse. Aut eos at saepe doloremque distinctio aliquam <span>enim vitae incidunt dicta</span> molestias delectus qui, adipisci nemo expedita neque illum perspiciatis, magnam quasi non blanditiis numquam consectetur quaerat ullam. Minima labore provident pariatur saepe velit inventore molestias <mark><i>repellat animi</i></mark> nihil sed fugit voluptatibus cumque optio sint vitae ea, rem molestiae fuga, architecto iusto quae! Corrupti labore recusandae, fugiat reprehenderit ipsam perspiciatis amet accusamus voluptatem pariatur nobis error <strong>harum praesentium qui</strong>.</p>
+
+  <!-- 
+    1. Visi ol ir ul elementų vaikiniai elementai privalo būti li elementai.
+    2. Li elementai yra naudojami TIK kaip ul ar ol elementų vaikiniai elementai.
+   -->
+   
+  <!-- Ordered List - numeruotas sąrašas -->
+  <ol>
+    <li class="color-green">Pirmas</li>
+    <li>Antras</li>
+    <li>Trečias</li>
+  </ol>
+
+  <!-- UNordered list - nenumeruotas sąrašas -->
+  <ul>
+    <li>Vienas</li>
+    <li class="color-green">Du</li>
+    <li>Trys</li>
+  </ul>
+
+  <!-- INLINE tipo HTML elementai -->
+  <button>Click Me</button>
+  <a href="https://www.google.com" target="_blank">Nuoroda į išorinį puslapį</a>
+  <a href="./batai.html">Nuoroda šiame <i>puslapyje</i></a>
+  <a href="#elemento-id" class="color-green">Test</a>
+
+  <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" alt="Cat on the tree" width="200">
+
+  <img src="./puppy.jpg" alt="White puppy" width="500">
+
+
+  <!-- <input type="text">
+  <input type="checkbox">
+  <input type="color">
+  <input type="date">
+  <input type="number"> -->
+</body>
+</html>
