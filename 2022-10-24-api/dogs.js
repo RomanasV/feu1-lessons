@@ -36,19 +36,21 @@ function init() {
         let mainBreed = key;
         let subBreeds = allBreeds[key];
 
-        console.log(subBreeds);
-        console.log(subBreeds.length);
-
         if (subBreeds.length > 0) {
-          console.log('turi sub veisles'); 
-        } else {
-          console.log('neturi sub veisliu');
-        }
 
-        let optionElement = document.createElement('option');
-        optionElement.textContent = '- ' + mainBreed;
-        optionElement.value = mainBreed;
-        selectElement.append(optionElement);
+          subBreeds.map(subBreed => {
+            let optionElement = document.createElement('option');
+            optionElement.textContent = `${mainBreed} (${subBreed})`;
+            optionElement.value = mainBreed + '/' + subBreed;
+            selectElement.append(optionElement);
+          })
+
+        } else {
+          let optionElement = document.createElement('option');
+          optionElement.textContent = mainBreed;
+          optionElement.value = mainBreed;
+          selectElement.append(optionElement);
+        }
       }
     })
 
@@ -58,7 +60,7 @@ function init() {
   dogsForm.addEventListener('submit', (event) => {
     event.preventDefault();
     let selectedBreed = event.target.elements['dogs-select'].value;
-    
+
     fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`)
       .then(res => res.json())
       .then(data => {
