@@ -3,7 +3,7 @@ function init() {
     .then(res => res.json())
     .then(data => {
       let allBreeds = data.message;
-      console.log(allBreeds);
+      let selectElement = document.querySelector('#dogs-select');
 
       // let breedKeys = Object.keys(allBreeds);
       // let breedValues = Object.values(allBreeds);
@@ -36,13 +36,40 @@ function init() {
         let mainBreed = key;
         let subBreeds = allBreeds[key];
 
-        let optionElement = document.createElement('option');
-        optionElement.textContent = mainBreed;
-        optionElement.value = mainBreed;
-        console.log(optionElement);
+        console.log(subBreeds);
+        console.log(subBreeds.length);
 
+        if (subBreeds.length > 0) {
+          console.log('turi sub veisles'); 
+        } else {
+          console.log('neturi sub veisliu');
+        }
+
+        let optionElement = document.createElement('option');
+        optionElement.textContent = '- ' + mainBreed;
+        optionElement.value = mainBreed;
+        selectElement.append(optionElement);
       }
     })
+
+  const dogsForm = document.querySelector('#dogs-form');
+  const imageWrapper = document.querySelector('#image-wrapper');
+
+  dogsForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedBreed = event.target.elements['dogs-select'].value;
+    
+    fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`)
+      .then(res => res.json())
+      .then(data => {
+        let imageUrl = data.message;
+        let imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+
+        imageWrapper.innerHTML = '';
+        imageWrapper.append(imageElement)
+      })
+  })
 }
 
 init();
