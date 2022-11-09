@@ -4,3 +4,12 @@ UŽDUOTIS
 2. Kiekvienam keturkampio objektui pridėti po funkciją, kuri skaičiuoja plotą.
 3. Kiekvienam keturkampio objektui pridėti po funkciją, kuri skaičiuoja perimetrą.
 4. Į konsolę išvesti visų keturkampių plotą ir perimetrą.
+
+5. Antram keturkampiui pridėti spalvą.
+6. Antram keturkampiui pridėti metodą, kuris leis paskaičiuoti pusės keturkampio plotą.
+
+7. Trečiam keturkampiui pridėti metodą, kuris grąžins tekstą „Keturkampio plotis: x, keturkampio aukštis: y"
+
+8. Į konsolę išvesti šiuos naujus duomenis.
+
+9. Visų keturkampių objektuose sukurti funkciją, kuri į html išveda tekstą apie ketururkampių informaciją: „Keturkampio plotis: x, keturkampio ilgis: y, keturkampio perimetras: z, keturkampio plotas: y."
