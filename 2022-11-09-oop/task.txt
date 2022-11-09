@@ -1,0 +1,6 @@
+UŽDUOTIS
+0. Sukurti 3 objektus: keturkampis1, keturkampis2 ir keturkampis3.
+1. Visiems keturkampių objektams pridėti plotį ir aukštį.
+2. Kiekvienam keturkampio objektui pridėti po funkciją, kuri skaičiuoja plotą.
+3. Kiekvienam keturkampio objektui pridėti po funkciją, kuri skaičiuoja perimetrą.
+4. Į konsolę išvesti visų keturkampių plotą ir perimetrą.
