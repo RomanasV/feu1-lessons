@@ -42,12 +42,16 @@ class Mammal extends Animal {
   milkFeeding() {
     return 'Feeding...';
   }
+
+  getInfo() {
+    return 'test';
+  }
 }
 
 // RŪŠIS
 // subclass Mammal klasei
 class Dog extends Mammal {
-  constructor(legs, color, gender, warmBlooded, herbivore, barking, name) {
+  constructor(color, gender, name, barking = true, legs = 4) {
     // super();
     // this.legs = legs;
     // this.color = color;
@@ -56,9 +60,11 @@ class Dog extends Mammal {
     // this.warmBlooded = warmBlooded;
     // this.barking = barking;
 
-    super(legs, color, gender, warmBlooded, herbivore);
+    super(legs, color, gender);
     this.barking = barking;
     this.name = name;
+    this.warmBlooded = true;
+    this.herbivore = false
   }
 
   bark() {
@@ -74,9 +80,9 @@ class Dog extends Mammal {
   }
 }
 
+const dog1 = new Dog('black', 'male', 'Brisius');
+const dog2 = new Dog('brown', 'female', 'Kitas vardas');
 
-const dog1 = new Dog(4, 'black', 'male', true, true, false, 'Brisius');
-const dog2 = new Dog(4, 'brown', 'female', true, false, true, 'Kitas vardas');
 console.log(dog1.milkFeeding());
 console.log(dog1.eat());
 console.log(dog2.sleep());
@@ -85,4 +91,6 @@ console.log(dog2.bark());
 
 const outputText = dog2.getInfo();
 dog2.renderText(outputText, 'h1');
+
+console.log(dog1);
 
