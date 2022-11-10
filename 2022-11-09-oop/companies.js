@@ -47,6 +47,10 @@ class Company {
     });
     this.workingLocations = updatedWorkingLocations;
   }
+
+  getActivityAreas() {
+    return this.activityAreas.join(', ') + '.';
+  }
 }
 
 const company1 = new Company(
@@ -98,6 +102,8 @@ console.log(company1);
 console.log(company2);
 
 console.log(company1.getAddress());
+console.log(company1.getWorkingLocations());
+console.log(company1.getActivityAreas());
 console.log(company2.getAddress());
 console.log(company2.getWorkingLocations());
 company2.addWorkingLocation('Spain');
