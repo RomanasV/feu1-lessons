@@ -178,6 +178,7 @@ class HalfRectangle extends Rectangle {
     // super();
     // this.height = rectHeight;
     // this.width = rectWidth;
+    // this.color = rectColor;
 
     super(rectHeight, rectWidth);
     this.color = rectColor;
@@ -185,6 +186,11 @@ class HalfRectangle extends Rectangle {
 
   halfArea() {
     return 'Half Area: ' + (this.height * this.width / 2);
+  }
+
+  renderData(selector) {
+    const element = document.querySelector(selector);
+    element.textContent = `Keturkampio plotis: ${this.width}, keturkampio aukštis: ${this.height}, keturkampio perimetras: ${this.perimeter()}, keturkampio plotas: ${this.area()}, keturkampio spalva: ${this.color}.`;
   }
 }
 
