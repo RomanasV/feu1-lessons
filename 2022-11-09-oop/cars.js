@@ -18,15 +18,17 @@
 
 
 class Car {
-  constructor(brand, model, engine, basePrice, mileage = 0, color) {
+  constructor(brand, model, engine, basePrice, mileage = 0, color = 'black') {
     this.brand = brand;
     this.model = model;
     this.engine = engine;
     this.basePrice = basePrice;
     this.mileage = mileage;
-    this.baseColors = [];
+    this.color = color;
+    this.baseColors = ['black', 'red', 'blue', 'silver', 'white', 'special blue'];
     this.mileageDiscountPercentage = this.getMileageDiscountPercentage();
     this.enginePrice = this.getEnginePrice();
+    this.colorPrice = this.getColorPrice();
     this.price = this.getPrice();
   }
 
@@ -58,10 +60,24 @@ class Car {
     return 0;
   }
 
-  getPrice() {
-    let { mileageDiscountPercentage, basePrice, enginePrice } = this;
+  getColorPrice() {
+    let { color, baseColors } = this;
 
-    const totalPrice = basePrice + enginePrice;
+    if (color === 'special blue') {
+      return 500;
+    }
+
+    if (!baseColors.includes(color)) {
+      return 3000;
+    }
+
+    return 0;
+  }
+
+  getPrice() {
+    let { mileageDiscountPercentage, basePrice, enginePrice, colorPrice } = this;
+
+    const totalPrice = basePrice + enginePrice + colorPrice;
     const mileageDiscount = totalPrice / 100 * mileageDiscountPercentage;
     
     return totalPrice - mileageDiscount;
