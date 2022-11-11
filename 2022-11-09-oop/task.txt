@@ -65,3 +65,9 @@ UŽDUOTIS:
        5.3. Jeigu rida daugiau nei 50000, tai kaina sumažėja 20%.
        5.4. Jeigu rida daugiau nei 100000, tai kaina sumažėja 30%.
        5.5. Jeigu rida daugiau nei 400000, tai kaina sumažėja 50%.
+
+
+6. Pridėti property 'baseColors'. Tai bus masyvas su bazinėmis spalvomis (juoda, raudona, mėlyna, sidabrinė, balta, 'special blue'). Jų pakeisti negalima, nes yra sukuriamos tiesiogiai klasės constructor funkcijoje.
+       6.1. Pridėti property 'color', kuria galima papildyti kuriant automobilio objektą pagal klasę. Jeigu kuriant objektą, spalva nėra nurodoma, tai pagal nutylėjimą ji bus juoda.
+       6.2. Jeigu nurodyta spalva yra 'special blue', tai automobilio kaina turi padidėti 500.
+       6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000.
