@@ -18,6 +18,7 @@ class Car {
     this.engine = engine;
     this.basePrice = basePrice;
     this.mileage = mileage;
+    this.enginePrice = this.getEnginePrice();
     this.price = this.getPrice();
   }
 
@@ -25,24 +26,28 @@ class Car {
     alert('vrooom');
   }
 
-  getPrice() {
+  getEnginePrice() {
     if (this.engine === 'electric') {
-      return this.basePrice + 10000;
+      return 10000;
     }
 
     if (this.engine === 'diesel') {
-      return this.basePrice + 5000;
+      return 5000;
     }
 
     if (this.engine === 'petrol') {
-      return this.basePrice;
+      return 0;
     }
 
     if (this.engine === 'hybrid') {
-      return this.basePrice + 7500;
+      return 7500;
     }
 
-    return this.basePrice;
+    return 0;
+  }
+
+  getPrice() {
+    return this.basePrice + this.enginePrice;
   }
 
   getDiscount(discountPercentage = 0) {
