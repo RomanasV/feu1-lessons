@@ -71,3 +71,26 @@ UŽDUOTIS:
        6.1. Pridėti property 'color', kuria galima papildyti kuriant automobilio objektą pagal klasę. Jeigu kuriant objektą, spalva nėra nurodoma, tai pagal nutylėjimą ji bus juoda.
        6.2. Jeigu nurodyta spalva yra 'special blue', tai automobilio kaina turi padidėti 500.
        6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000.
+
+7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną.
+       7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą.
+
+8. HTML faile sukurti form'ą. 
+8.1. Formoje galima įrašyti automobilio:
+       8.1. Brand'ą
+       8.2. Modelį
+       8.3. Variklio tipą
+       8.4. Bazinę kainą
+       8.5. Kilometražą
+       8.6. Spalvą
+       8.7. Nuorodą į automobilio nuotrauką
+8.2. Formos submit metu, informaciją surinkti ir sukurti automobilio objektą, naudojant Car klasę.
+8.3. Panaudoti 'renderElement' metodą ir atvaizduoti automobilio HTML elementą ekrane.
+
+9. 'renderElement' funkcijoje pridėti mygtuką, kurį paspaudus turėtų atvaizduoti pilnos paketą:
+       9.1. Bazinė kaina.
+       9.2. Papildomų paslaugų kainos.
+       9.3. Nuolaida dėl kilometražo.
+       9.4. Pritaikyta nuolaida.
+       9.5. Galutinė kaina.
+       9.6. PVM mokestis ir kaina su PVM mokesčiu.
