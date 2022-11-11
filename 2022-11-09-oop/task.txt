@@ -53,3 +53,7 @@ UŽDUOTIS:
 9. Sukurti funkcijas, kurios pašalina:
        9.1. Veiklos šalį iš šalių masyvo.
        9.2. Veiklos rūšį iš veiklų masyvo.
+
+
+1. Susikurkite konstruktorių car, kuris priims brand, model, engine ir turės metodą 'turnOn' - kuris alertins 'vrooom'. Sukurkite du objektus ir patikrinkite ar veikia.
+2. Pakoreguokite šį konstruktorių ir pridėkite papildomą property 'basePrice' ir metodą 'getPrice'. basePrice propertį įrašys sukuriant objektą, tačiau getPric priklausimai nuo variklio išmes kokia yra galutinė kaina. Jei variklis 'electric' - kaina bus +10,000; jei 'diesel' +5,000; jei 'petrol' - kaina tokia kokia ir basePrice.
