@@ -16,23 +16,25 @@
 //        6.2. Jeigu nurodyta spalva yra 'special blue', tai automobilio kaina turi padidėti 500.
 //        6.3. Jeigu nurodytos spalvos nėra tarp bazinių spalvų, tai automobilio kaina turėtų padidėti 3000.
 
+// 7. Sukurti metodą 'renderElement', kuris sukurią html elementą, jame atvaizduoja automobilio informaciją (modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą) ir šį elementą išveda į ekraną.
+//        7.1. Pridėti property 'image', kuris turėtų būti nuotrauka ir šią nuotrauką, taip pat, pridėti į formuluojamą elementą.
 
 class Car {
-  constructor(brand, model, engine, basePrice, mileage = 0, color = 'black') {
+  constructor(brand, model, engine, basePrice, image, mileage = 0, color = 'black') {
     this.brand = brand;
     this.model = model;
     this.engine = engine;
     this.basePrice = basePrice;
+    this.image = image;
     this.mileage = mileage;
     this.color = color;
+    
     this.baseColors = ['black', 'red', 'blue', 'silver', 'white', 'special blue'];
     this.mileageDiscountPercentage = this.getMileageDiscountPercentage();
     this.enginePrice = this.getEnginePrice();
     this.colorPrice = this.getColorPrice();
     this.price = this.getPrice();
   }
-
-// (bazine kaina + variklio kaina - nuolaida del dideles ridos) / 100 * nuolaida
 
   turnOn() {
     alert('vrooom');
@@ -125,14 +127,54 @@ class Car {
     const discount = price / 100 * discountPercentage;
     return price - discount;
   }
+
+  renderElement() {
+    const carItem = document.createElement('div');
+    carItem.classList.add('car-item');
+
+    // modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą
+    const { brand, model, engine, mileage, color, basePrice, image } = this;
+
+    const carTitle = document.createElement('h2');
+    carTitle.classList.add('car-title');
+    carTitle.textContent = `${brand} (${model})`;
+
+    const carImage = document.createElement('img');
+    carImage.classList.add('car-image');
+    carImage.src = image;
+    carImage.alt = `${brand} ${model} car ${color} color`;
+
+    const carInfoList = document.createElement('ul');
+    carInfoList.classList.add('car-info-list');
+
+    carInfoList.innerHTML = `<li class="car-info-item"><strong>Engine: </strong>${engine}</li>
+                             <li class="car-info-item"><strong>Mileage: </strong>${mileage}</li>
+                             <li class="car-info-item"><strong>Color: </strong>${color}</li>
+                             <li class="car-info-item"><strong>Base Price: </strong>${basePrice}</li>`;
+
+    carItem.append(carTitle, carImage, carInfoList);
+    return carItem;
+  }
 }
 
-const car1 = new Car('Toyota', 'Rav4', 'electric', 30000, 100, 'special blue');
-console.log(car1);
-console.log(car1.brand);
-console.log(car1.model);
-console.log(car1.engine);
-console.log(car1.basePrice);
-console.log(car1.getPrice());
-console.log(car1.getDiscount(50))
-car1.getMileageDiscountPercentage();
+function init() {
+  const car1 = new Car('Toyota', 'Rav4', 'electric', 30000, 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg', 100, 'special blue');
+  
+  const car2 = new Car('BMW', 'Rav4', 'electric', 50000, 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg', 0, 'white');
+  console.log(car1);
+  console.log(car1.brand);
+  console.log(car1.model);
+  console.log(car1.engine);
+  console.log(car1.basePrice);
+  console.log(car1.getPrice());
+  console.log(car1.getDiscount(50))
+  car1.getMileageDiscountPercentage();
+  
+  const carsWrapper = document.querySelector('#cars-wrapper');
+
+  carsWrapper.append(car1.renderElement());
+  carsWrapper.append(car2.renderElement());
+}
+
+init();
+

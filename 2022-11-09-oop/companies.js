@@ -108,4 +108,3 @@ console.log(company2.getAddress());
 console.log(company2.getWorkingLocations());
 company2.addWorkingLocation('Spain');
 console.log(company2.getWorkingLocations());
-
