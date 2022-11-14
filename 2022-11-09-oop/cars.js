@@ -152,7 +152,15 @@ class Car {
                              <li class="car-info-item"><strong>Color: </strong>${color}</li>
                              <li class="car-info-item"><strong>Base Price: </strong>${basePrice}</li>`;
 
-    carItem.append(carTitle, carImage, carInfoList);
+    const moreInfoButton = document.createElement('button')
+    moreInfoButton.classList.add('more-info-button');
+    moreInfoButton.textContent = 'More Info';
+
+    moreInfoButton.addEventListener('click', () => {
+      console.log('veikia');
+    })
+
+    carItem.append(carTitle, carImage, carInfoList, moreInfoButton);
     return carItem;
   }
 }
@@ -171,9 +179,27 @@ function init() {
   car1.getMileageDiscountPercentage();
   
   const carsWrapper = document.querySelector('#cars-wrapper');
+  const carForm = document.getElementById('car-form');
 
-  carsWrapper.append(car1.renderElement());
-  carsWrapper.append(car2.renderElement());
+  carForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const { elements } = event.target;
+
+    const brand = elements.brand.value;
+    const model = elements.model.value;
+    const engine = elements.engine.value;
+    const mileage = Number(elements.mileage.value);
+    const color = elements.color.value;
+    const basePrice = Number(elements['base-price'].value);
+    const image = elements.image.value;
+
+    const vehicle = new Car(brand, model, engine, basePrice, image, mileage, color);
+    console.log(vehicle);
+    carsWrapper.append(vehicle.renderElement());
+  })
+
+  // carsWrapper.append(car1.renderElement());
+  // carsWrapper.append(car2.renderElement());
 }
 
 init();

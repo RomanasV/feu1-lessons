@@ -12,11 +12,36 @@
     <form id="car-form">
       <div class="form-control">
         <label for="brand">Brand:</label>
-        <input type="tel" name="brand" id="brand">
+        <input type="text" name="brand" id="brand">
       </div>
       <div class="form-control">
         <label for="model">Model:</label>
-        <input type="tel" name="model" id="model">
+        <input type="text" name="model" id="model">
+      </div>
+      <div class="form-control">
+        <label for="engine">Engine:</label>
+        <select name="engine" id="engine">
+          <option value="diesel">Diesel</option>
+          <option value="petrol">Petrol</option>
+          <option value="electric">Electric</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="mileage">Mileage:</label>
+        <input type="number" name="mileage" id="mileage" step="1000" value="0">
+      </div>
+      <div class="form-control">
+        <label for="color">Color:</label>
+        <input type="text" name="color" id="color">
+      </div>
+      <div class="form-control">
+        <label for="base-price">Base Price:</label>
+        <input type="number" name="base-price" id="base-price" step="200" placeholder="Enter base price">
+      </div>
+      <div class="form-control">
+        <label for="image">Image:</label>
+        <input type="url" name="image" id="image">
       </div>
 
       <div class="form-control">
