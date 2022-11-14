@@ -133,7 +133,7 @@ class Car {
     carItem.classList.add('car-item');
 
     // modelį, brandą, variklio tipą, kilometražą, spalvą, bazinę kainą
-    const { brand, model, engine, mileage, color, basePrice, image } = this;
+    const { brand, model, engine, mileage, color, basePrice, image, price, mileageDiscountPercentage, colorPrice, enginePrice } = this;
 
     const carTitle = document.createElement('h2');
     carTitle.classList.add('car-title');
@@ -157,7 +157,30 @@ class Car {
     moreInfoButton.textContent = 'More Info';
 
     moreInfoButton.addEventListener('click', () => {
-      console.log('veikia');
+      const moreInfoWrapper = document.createElement('div');
+      moreInfoWrapper.classList.add('more-info-wrapper');
+
+      const moreInfoList = document.createElement('ul');
+      moreInfoList.classList.add('more-info-list');
+
+      moreInfoList.innerHTML = `<li><strong>Base price: </strong>€ ${basePrice}</li>
+                                <li><strong>Engine: </strong>€ ${enginePrice}</li>
+                                <li><strong>Color: </strong>€ ${colorPrice}</li>
+                                <li><strong>Price: </strong>€ ${price}</li>
+                                <li><strong>Mileage Discount: </strong>${mileageDiscountPercentage}%</li>
+                                <li><strong>VAT: </strong>€ ${price * 0.21}</li>
+                                <li><strong>Price after VAT: </strong>€ ${price * 1.21}</li>`;
+
+      const closeButton = document.createElement('button');
+      closeButton.classList.add('close-button');
+      closeButton.textContent = 'Close';
+
+      closeButton.addEventListener('click', () => {
+        moreInfoWrapper.remove();
+      })
+
+      moreInfoWrapper.append(moreInfoList, closeButton);
+      carItem.append(moreInfoWrapper);
     })
 
     carItem.append(carTitle, carImage, carInfoList, moreInfoButton);
