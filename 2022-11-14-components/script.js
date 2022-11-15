@@ -1,14 +1,21 @@
-import header from './components/header.js';
-import news from './components/news.js';
+import header from "./components/header.js";
+import news from "./components/news.js";
+import sidebar from "./components/sidebar.js";
 
-const root = document.querySelector('#root');
+const root = document.querySelector("#root");
 
 const headerElement = header();
 
-const contentWrapper = document.createElement('div');
-contentWrapper.classList.add('content-wrapper');
+const container = document.createElement("div");
+container.classList.add("container");
 
-contentWrapper.append(news());
+const contentWrapper = document.createElement("div");
+contentWrapper.classList.add("content-wrapper");
 
+const newsElement = news();
+const sidebarElement = sidebar();
 
-root.append(headerElement, contentWrapper);
+contentWrapper.append(newsElement, sidebarElement);
+container.append(contentWrapper);
+
+root.append(headerElement, container);
