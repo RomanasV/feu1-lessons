@@ -2,7 +2,7 @@ export default function podcastItem() {
   const podcast = document.createElement('div');
   podcast.classList.add('podcast');
 
-  podcast.innerHTML = `<img class="podcast-image" src="podcast-image-without-border.jpg">
+  podcast.innerHTML = `<img class="podcast-image" src="../assets/images/podcast-image-without-border.jpg">
                        <span class="podcast-time">Trukmė: 7:55</span>
                        <button class="podcast-play">Play</button>
                        <div class="podcast-info">

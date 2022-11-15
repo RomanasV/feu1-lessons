@@ -164,17 +164,17 @@ body {
   height: 350px;
 }
 
-.event .content-wrapper {
+.event .event-content-wrapper {
   padding: 55px 15px 15px;
   position: relative;
 }
 
-.event .content-wrapper .event-title {
+.event .event-content-wrapper .event-title {
   margin-bottom: 0;
   margin-top: 5px;
 }
 
-.event .content-wrapper .date {
+.event .event-content-wrapper .date {
   background-color: green;
   width: 70px;
   text-align: center;
@@ -184,14 +184,15 @@ body {
   top: -40px;
 }
 
-.event .content-wrapper .day {
+.event .event-content-wrapper .day {
   background-color: white;
   font-size: 28px;
   color: black;
   padding: 10px 5px;
 }
 
-.event .content-wrapper .month {
+.event .event-content-wrapper .month {
   background-color: #ff00e9;
   padding: 5px;
+  text-transform: uppercase;
 }

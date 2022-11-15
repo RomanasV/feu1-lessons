@@ -4,7 +4,7 @@ export default function secondaryNews() {
   const secondaryNews = document.createElement('div');
   secondaryNews.classList.add('secondary-news');
 
-  secondaryNews.append(newsArticle(), newsArticle(), newsArticle(), newsArticle());
+  secondaryNews.append(newsArticle({title: 'Pavadinimas', data: '2022-11-10'}), newsArticle(), newsArticle(), newsArticle());
   
   return secondaryNews;
 }

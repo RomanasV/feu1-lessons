@@ -12,7 +12,7 @@ container.classList.add("container");
 const contentWrapper = document.createElement("div");
 contentWrapper.classList.add("content-wrapper");
 
-const newsElement = news();
+const newsElement = news({ title: 'News' });
 const sidebarElement = sidebar();
 
 contentWrapper.append(newsElement, sidebarElement);

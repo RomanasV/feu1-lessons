@@ -1,4 +1,4 @@
-export default function newsArticle() {
+export default function newsArticle(props) {
   const newsArticleElement = document.createElement('div');
   newsArticleElement.classList.add('news-article');
 
